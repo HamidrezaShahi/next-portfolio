@@ -1,0 +1,15 @@
+{
+    "title": {
+      "en": "Welcome to my portfolio",
+      "fa": "به پورتفولیوی من خوش آمدید"
+    },
+    "about": {
+      "en": "About Me", 
+      "fa": "درباره من"
+    },
+    "contact": {
+      "en": "Contact Me",
+      "fa": "تماس با من"
+    }
+  }
+
