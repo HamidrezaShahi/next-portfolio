@@ -1,8 +1,73 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Portfolio Website
 
-## Getting Started
+A modern, responsive portfolio website built with Next.js, showcasing projects, skills, and providing a contact form. This portfolio features smooth animations, dark/light mode toggle, and a clean, professional design.
 
-First, run the development server:
+## 🚀 Features
+
+- **Responsive Design**: Fully responsive layout that works on all devices
+- **Dark/Light Mode**: Toggle between dark and light themes using Redux state management
+- **Smooth Animations**: Beautiful animations powered by Framer Motion
+- **Portfolio Showcase**: Display your projects with an interactive portfolio section
+- **Contact Form**: MongoDB-integrated contact form to receive messages
+- **About Section**: Personal introduction and skills showcase
+- **Modern UI Components**: Built with Radix UI and Tailwind CSS
+
+## 🛠️ Tech Stack
+
+- **Framework**: [Next.js 15](https://nextjs.org/) (App Router)
+- **Language**: TypeScript
+- **Styling**: Tailwind CSS
+- **UI Components**: Radix UI
+- **Animations**: Framer Motion
+- **State Management**: Redux Toolkit
+- **Database**: MongoDB with Mongoose
+- **Icons**: React Icons, Lucide React
+- **Photo Viewer**: React Photo View
+
+## 📋 Prerequisites
+
+Before you begin, ensure you have the following installed:
+
+- Node.js (v18 or higher)
+- npm, yarn, pnpm, or bun
+- MongoDB database (local or remote)
+
+## 🔧 Installation
+
+1. Clone the repository:
+
+```bash
+git clone <your-repo-url>
+cd next-portfolio
+```
+
+2. Install dependencies:
+
+```bash
+npm install
+# or
+yarn install
+# or
+pnpm install
+# or
+bun install
+```
+
+3. Set up environment variables:
+
+Create a `.env.local` file in the root directory and add your MongoDB connection string:
+
+```env
+MONGODB_URI=your_mongodb_connection_string
+```
+
+**Note**: Currently, the MongoDB URI is hardcoded in `src/lib/mongodb.ts`. For production, move it to environment variables.
+
+## 🏃 Running the Project
+
+### Development Mode
+
+Run the development server:
 
 ```bash
 npm run dev
@@ -14,23 +79,93 @@ pnpm dev
 bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) in your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+The page will auto-update as you edit the files.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### Production Build
 
-## Learn More
+Build the project for production:
 
-To learn more about Next.js, take a look at the following resources:
+```bash
+npm run build
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Start the production server:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+```bash
+npm start
+```
 
-## Deploy on Vercel
+### Linting
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Run the linter to check for code issues:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+```bash
+npm run lint
+```
+
+## 📁 Project Structure
+
+```
+next-portfolio/
+├── src/
+│   ├── app/                    # Next.js app directory
+│   │   ├── api/                # API routes
+│   │   │   └── contact/        # Contact form API
+│   │   ├── components/         # React components
+│   │   │   ├── Layout/         # Header and Footer
+│   │   │   └── ui/             # UI components
+│   │   ├── page.tsx            # Home page
+│   │   └── layout.tsx          # Root layout
+│   ├── components/             # Shared components
+│   ├── context/                # React context
+│   ├── lib/                    # Utility functions
+│   │   └── mongodb.ts          # MongoDB connection
+│   └── models/                 # Mongoose models
+├── component/                   # Custom components (BlurText, GradientText)
+└── public/                     # Static assets
+```
+
+## 🎨 Key Components
+
+- **Header**: Navigation bar with smooth scrolling
+- **ItsMe**: Hero section with introduction
+- **About**: Personal information and skills
+- **PortfolioShowCase**: Interactive project showcase
+- **HaveProjects**: Contact form section
+- **Footer**: Footer with links and information
+
+## 🔐 Environment Variables
+
+Make sure to set up the following environment variables:
+
+- `MONGODB_URI`: Your MongoDB connection string
+
+## 📝 Available Scripts
+
+- `npm run dev` - Start development server
+- `npm run build` - Build for production
+- `npm start` - Start production server
+- `npm run lint` - Run ESLint
+
+## 🚀 Deployment
+
+The easiest way to deploy this Next.js app is using [Vercel](https://vercel.com):
+
+1. Push your code to GitHub
+2. Import your repository to Vercel
+3. Add your environment variables
+4. Deploy!
+
+For more deployment options, check out the [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying).
+
+## 📚 Learn More
+
+- [Next.js Documentation](https://nextjs.org/docs) - Learn about Next.js features and API
+- [Learn Next.js](https://nextjs.org/learn) - Interactive Next.js tutorial
+- [Next.js GitHub Repository](https://github.com/vercel/next.js) - Your feedback and contributions are welcome!
+
+## 📄 License
+
+This project is private and personal.
